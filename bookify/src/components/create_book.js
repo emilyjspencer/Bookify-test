@@ -4,7 +4,7 @@ class CreateBook extends Component {
     render() {
         return (
             <div>
-              <p>Create Book component</p>
+              <h1>Create Book component</h1>
               </div>
         );
     }

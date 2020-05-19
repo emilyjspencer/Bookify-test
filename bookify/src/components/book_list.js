@@ -4,10 +4,10 @@ class BookList extends Component {
     render() {
         return (
             <div>
-              <p>Book List component</p>
+              <h1>Book List component</h1>
               </div>
         );
     }
 }
 
-export default CreateBook;
+export default BookList;

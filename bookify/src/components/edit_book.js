@@ -4,7 +4,7 @@ class EditBook extends Component {
     render() {
         return (
             <div>
-              <p>Edit Book component</p>
+              <h1>Edit Book component</h1>
               </div>
         );
     }
