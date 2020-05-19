@@ -10,6 +10,9 @@ let bookSchema = new Schema({
   },
   genre: {
     type: String
+  },
+  isbn: {
+      type: String
   }
 }, {
     collection: 'books'
