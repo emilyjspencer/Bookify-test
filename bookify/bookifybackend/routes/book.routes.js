@@ -25,7 +25,17 @@ router.route('/').get((req, res) => {
         res.json(data)
       }
     })
-  })
+});
+
+router.route('/edit-book/:id').get((req, res) => {
+  bookSchema.findById(req.params.id, (err, data) => {
+      if (err) {
+        return next(err)
+      } else {
+        res.json(data)
+      }
+    })
+});
 
 
 
