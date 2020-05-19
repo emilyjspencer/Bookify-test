@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import axios from 'axios';
 
 class CreateBook extends Component {
     constructor(props) {
@@ -37,6 +38,14 @@ class CreateBook extends Component {
       console.log(`BookTitle: ${this.state.booktitle}`);
       console.log(`Author ${this.state.author}`);
       console.log(`Genre: ${this.state.genre}`);
+
+      const bookObject = {
+        title: this.state.title,
+        author: this.state.author,
+        genre: this.state.genre
+      };
+      axios.post('http://localhost:3000/books/create-book', bookObject)
+        .then(res => console.log(res.data));
     
 
     this.setState({booktitle: '', author: '', genre: '' })
