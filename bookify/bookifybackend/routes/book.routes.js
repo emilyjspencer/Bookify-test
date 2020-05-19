@@ -37,6 +37,20 @@ router.route('/edit-book/:id').get((req, res) => {
     })
 });
 
+router.route('/update-book/:id').put((req, res, next) => {
+  bookSchema.findByIdAndUpdate(req.params.id, {
+    $set: req.body
+    }, (err, data) => {
+      if (error) {
+        return next(err);
+        console.log(err)
+      } else {
+        res.json(data)
+        console.log('Book was updated')
+      }
+    })
+});
+
 
 
 module.exports = router;
